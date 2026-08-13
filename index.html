@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"
+    >
+
+    <title>Microsoft 365 Calendar Panel</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <script
+    type="text/javascript"
+    src="https://alcdn.msauth.net/browser/2.35.0/js/msal-browser.min.js">
+</script>
+
+</head>
+
+<body>
+
+    <div id="panel">
+
+        <header>
+
+            <div>
+
+                <div id="date"></div>
+
+                <div id="availability">
+                    Calendar Panel
+                </div>
+
+            </div>
+
+            <div id="clock"></div>
+
+        </header>
+
+
+        <main>
+
+            <section id="signedOut">
+
+                <h1>
+                    Microsoft 365 Calendar
+                </h1>
+
+                <button id="signInButton">
+                    Sign in with Microsoft
+                </button>
+
+            </section>
+
+
+            <section
+                id="signedIn"
+                hidden
+            >
+
+                <div class="nextMeetingCard">
+
+                    <div class="smallHeading">
+                        NEXT MEETING
+                    </div>
+
+                    <div id="nextMeeting">
+                        Loading…
+                    </div>
+
+                </div>
+
+
+                <h2>Today</h2>
+
+                <div id="events"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

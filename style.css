@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #101010;
+    color: white;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+#panel {
+    min-height: 100vh;
+    padding: 28px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+#clock {
+    font-size: 56px;
+    font-weight: 600;
+}
+
+#date {
+    font-size: 24px;
+}
+
+#availability {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.65;
+}
+
+button {
+    padding: 18px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nextMeetingCard {
+    padding: 26px;
+    background: #222;
+    border-radius: 16px;
+    margin-bottom: 28px;
+}
+
+.smallHeading {
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+#nextMeeting {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    padding: 17px 0;
+    border-bottom: 1px solid #333;
+}
+
+.event-time {
+    font-size: 20px;
+}
+
+.event-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.event-location {
+    margin-top: 5px;
+    opacity: 0.6;
+}
