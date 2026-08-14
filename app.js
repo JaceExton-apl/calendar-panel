@@ -458,12 +458,54 @@ function updateClock() {
 
 updateClock();
 
+restoreSession();
 
 setInterval(
     updateClock,
     1000
 );
 
+async function restoreSession() {
+
+    const accounts =
+        msalInstance.getAllAccounts();
+
+    if (accounts.length === 0) {
+        signedOut.hidden = false;
+        signedIn.hidden = true;
+        return;
+    }
+
+    const account =
+        accounts[0];
+
+    msalInstance.setActiveAccount(
+        account
+    );
+
+    try {
+
+        await msalInstance.acquireTokenSilent({
+            scopes: loginRequest.scopes,
+            account: account
+        });
+
+        signedOut.hidden = true;
+        signedIn.hidden = false;
+
+        await loadCalendar();
+
+    } catch (error) {
+
+        console.warn(
+            "Existing session could not be restored:",
+            error
+        );
+
+        signedOut.hidden = false;
+        signedIn.hidden = true;
+    }
+}
 
 setInterval(
     loadCalendar,
