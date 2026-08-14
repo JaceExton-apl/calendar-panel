@@ -10,9 +10,12 @@ body {
 }
 
 body {
+    min-height: 100vh;
+
+
     background-color: #101010;
-    background-image: url("background_02.png");
-    background-size: cover;
+    background-image: url("background_02_v2.png");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
