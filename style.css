@@ -10,7 +10,13 @@ body {
 }
 
 body {
-    background: #101010;
+    background-color: #101010;
+    background-image: url("background_02.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: white;
 
     font-family:
